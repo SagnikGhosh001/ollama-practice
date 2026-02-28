@@ -42,8 +42,8 @@ const tools = [
   {
     type: "function",
     function: {
-      name: "subtract",
-      description: "subtract two numbers",
+      name: "substract",
+      description: "substract two numbers",
       parameters: {
         type: "object",
         properties: {
@@ -80,13 +80,13 @@ while (true) {
     });
   }
 
-  if (toolCall.function.name === "subtract") {
+  if (toolCall.function.name === "substract") {
     const args = toolCall.function.arguments;
     const result = args.a - args.b;
 
     messages.push({
       role: "tool",
-      name: "subtract",
+      name: "substract",
       content: JSON.stringify(result),
     });
   }
