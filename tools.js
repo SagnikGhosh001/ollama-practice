@@ -12,11 +12,12 @@ const callOllama = async (messages, tools) => {
 
   return res.json();
 };
+
 const messages = [
   {
     role: "system",
     content: "You are a helpful math assistant.",
-  },
+  },  
   {
     role: "user",
     content: Deno.args[0],
